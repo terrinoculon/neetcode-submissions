@@ -1,0 +1,16 @@
+class Solution {
+public:
+    bool hasDuplicate(vector<int>& nums) {
+      if (nums.empty()){
+        return false;
+      }
+
+      std::sort(nums.begin(), nums.end());
+      for (auto i=0;i<nums.size() -1;i++){
+        if (nums[i] == nums[i+1]){
+            return true;
+        }
+      }
+      return false;  
+    }
+};
